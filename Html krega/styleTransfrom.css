@@ -1,0 +1,13 @@
+.transform{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    transform: translateX(100px) translateY(200px);
+    /* transform:scale(2,5); */
+    margin: 500px 500px;
+    transform: skew(-15deg);
+    /* transform: translateY(500px); */
+}
+.check{
+    background-color: red;
+}

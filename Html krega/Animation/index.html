@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="shortcut icon" href="images.jpg" type="image/x-icon">
+    <style>
+         .container{
+           height: 226px;
+           width: 800px;
+           background: hotpink;
+           display: flex;
+         }
+         .box{
+            border: 2px solid black;
+            background: blue;
+            height: 222px;
+            width: 200px;
+            /* margin: 50px;
+            transition: transform 1s cubic-bezier(0, 1.39, 1, 1); */
+
+            animation-name: love;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: normal;
+             
+            
+            animation-delay: 1s;
+            animation-direction: alternate;
+
+         }
+
+         @keyframes love {
+            /* from {
+                width: 200;
+            }
+            to{
+                width: 800px;
+            } */
+            0%{
+               width: 200px;
+               background: white;
+            }
+            30%{
+                width: 400px;
+                background: black;
+            }
+            75%{
+                width: 800px;
+                background: red;
+            }
+         }
+         /* .box:hover{
+            background: black;
+            color: white;
+            transform: translateX(500px);
+            transform: rotate(45deg);
+         } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">ABC</div>
+    </div>
+</body>
+</html>

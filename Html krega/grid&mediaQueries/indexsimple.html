@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+       .container{
+        height: 700px;
+        width: 505px;
+        background: yellow;
+
+        display: grid;
+        grid-template-rows: 30px 1fr 30px;
+       grid-template-columns: 100px 400px;
+
+       gap: 5px;
+
+      grid-template-areas: 
+      "hd hd"
+      "side main"
+      "ft ft";
+       }
+       .box{
+        background: blue;
+        /* height: 100px; */
+        /* width: 100px; */
+       }
+       #header{
+        grid-area: hd;
+       }
+       #footer{
+        grid-area: ft;
+       }
+       #sidebar{
+        grid-area: side;
+       }
+       #content{
+       grid-area: main;
+       }
+
+       /* @media(max-width:400px){
+          .container{
+            gap: 100px;
+          }
+       } */
+
+       @media (max-width:500px) {
+          .container{
+            grid-template-rows: 30px 1fr 1fr 30px;
+           grid-template-columns: 1fr;
+  
+          gap: 3px;
+
+          grid-template-areas: 
+         "hd"
+         "side"
+         "main"
+         "ft";
+         }
+      }
+     .childGrid{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2,1fr);
+        gap: 5px;
+     }
+     .element{
+        border: 2 solid black;
+        background: hotpink;
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="header">HEADER</div>
+        <div class="box" id="sidebar">SIDEBAR</div>
+        <div class="box" id="content">
+              <div class="childGrid">
+                  <div class="element">IMG1</div>
+                  <div class="element">IMG2</div>
+                  <div class="element">IMG3</div>
+                  <div class="element">IMG4</div>
+              </div>
+        </div>
+        <div class="box" id="footer">FOOTER</div>
+    </div>
+</body>
+</html>
